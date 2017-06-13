@@ -29,6 +29,8 @@
       when: newrelic_license_key is defined and newrelic_license_key != ''
     - nginx
     - supervisor
+    - role: jupyterlab
+      when: use_jupyterlab is defined and use_jupyterlab
     - role: remotekernel
       when: use_remotekernel is defined and use_remotekernel
     - role: nbexamples
