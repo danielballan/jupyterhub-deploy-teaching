@@ -1,0 +1,23 @@
+---
+
+- name: install nbexamples packages via pip
+  pip: name={{item}} state=present editable=false executable='/opt/conda/bin/pip'
+  become: true
+  with_items:
+    - nbexamples==0.3.1
+
+- name: install nbexamples extension with jupyter
+  shell: jupyter nbextension install --py nbexamples --sys-prefix
+
+- name: enable nbexamples extension
+  shell: jupyter nbextension enable --py nbexamples --sys-prefix
+
+- name: enable nbexamples serverextension
+  shell: jupyter serverextension enable --py nbexamples --sys-prefix
+
+- name: configure notebook server extensions to include nbexamples
+  lineinfile:
+    dest: /etc/jupyter/jupyter_notebook_config.py
+    state: present
+    line: 'c.NotebookApp.nbserver_extensions.append("nbexamples.handlers")'
+    create: yes
