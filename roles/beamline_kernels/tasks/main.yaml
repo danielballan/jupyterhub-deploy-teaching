@@ -20,4 +20,4 @@
     create: yes
 
 - name: remove default 'Python 3' kernel
-  shell: /opt/conda/bin/pip uninstall -y ipykernel && jupyter kernelspec remove -f python3
+  shell: conda remove ipykernel --force && jupyter kernelspec remove -f python3
