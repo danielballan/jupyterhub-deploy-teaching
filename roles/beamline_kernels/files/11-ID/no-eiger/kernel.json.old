@@ -1,0 +1,5 @@
+{
+ "argv": ["rkscript", "/tmp/testenv/bin/python", "{connection_file}", "xf23id1-srv1"],
+ "display_name": "srv1",
+ "language": "python"
+}

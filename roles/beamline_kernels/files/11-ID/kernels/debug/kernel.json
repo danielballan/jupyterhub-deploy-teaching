@@ -1,0 +1,4 @@
+{"argv":["/opt/conda_envs/debug_analysis/bin/python", "-m", "IPython.kernel", "-f", "{connection_file}"],
+ "display_name":"CHX (debug)",
+ "host":"xf11id-srv1"
+}

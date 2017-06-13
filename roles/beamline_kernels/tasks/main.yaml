@@ -1,0 +1,13 @@
+---
+
+- name: make sure beamline_kernels_dir exists
+  file: path={{ beamline_kernels_dir }}/ state={{item}} owner=root group=root mode=0755
+  become: true
+  with_items:
+    - directory
+    - touch
+
+- name: sync beamline kernels
+  synchronize:
+    src: ../files/
+    dest: "{{ beamline_kernels_dir }}"

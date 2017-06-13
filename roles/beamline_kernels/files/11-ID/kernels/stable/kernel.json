@@ -1,0 +1,4 @@
+{"argv":["HDF5_PLUGIN_PATH=/home/xf11id/lz4_workaround/HDF5Plugin", "/opt/conda_envs/analysis/bin/python", "-m", "IPython.kernel", "-f", "{connection_file}"],
+ "display_name":"CHX (stable)",
+ "host":"xf11id-srv1"
+}

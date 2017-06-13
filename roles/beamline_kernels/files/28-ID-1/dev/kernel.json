@@ -1,0 +1,4 @@
+{"argv":["/opt/conda_envs/analysis-dev/bin/python", "-m", "IPython.kernel", "-f", "{connection_file}"],
+ "display_name":"XPD (py3)",
+ "host":"xf28id-ca1"
+}

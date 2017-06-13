@@ -1,0 +1,4 @@
+{"argv":["/opt/conda_envs/analysis/bin/python", "-m", "IPython.kernel", "-f", "{connection_file}"],
+ "display_name":"IXS (stable)",
+ "host":"xf10id-srv1"
+}

@@ -58,3 +58,9 @@ letsencrypt_ssl_cert_path: "/etc/letsencrypt/live/{{inventory_hostname}}/fullcha
 
 nbgrader_log_dir: /var/log/nbgrader
 nbgrader_exchange_dir: /srv/nbgrader/exchange
+
+# ---------------------------------------------------
+# Beamline Kernels
+# ---------------------------------------------------
+
+beamline_kernels_dir: /opt/jupyter
