@@ -11,5 +11,5 @@
   pip: name={{item}} state=present editable=false executable='/opt/conda/bin/pip'
   become: true
   with_items:
-    - jupyterhub==0.7
+    - jupyterhub==0.7.2
     - oauthenticator==0.5
