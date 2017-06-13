@@ -1,0 +1,28 @@
+---
+
+- name: install remotekernel via pip
+  pip: name={{item}} state=present editable=false executable='/opt/conda/bin/pip'
+  become: true
+  with_items:
+    - remotekernel==0.2.3
+    - oauthenticator==0.5
+    - sudospawner==0.4
+
+- name: use remotekernel KernelSpec variant
+  lineinfile:
+    dest: /etc/jupyter/jupyter_notebook_config.py
+    state: present
+    line: 'c.KernelSpecManager.kernel_spec_class = "remotekernel.kernelspec.RemoteKernelSpec"'
+    create: yes
+
+- name: use remotekernel MappingKerenlManager variant
+  lineinfile:
+    dest: /etc/jupyter/jupyter_notebook_config.py
+    state: present
+    line: 'c.MappingKernelManager.kernel_manager_class = "remotekernel.manager.RemoteIOLoopKernelManager"'
+    create: yes
+
+- name: HACK patch jupyter_client package to revert change that broke remotekernel
+  patch:
+    src: ../patches/jupyter_client_patch.diff
+    dest: /opt/conda/lib/python3.6/site-packages/jupyter_client/connect.py
