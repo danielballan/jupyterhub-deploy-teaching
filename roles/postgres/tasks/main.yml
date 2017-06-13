@@ -1,0 +1,28 @@
+---
+- name: ensure packages are installed
+  apt: name={{item}}
+  with_items:
+      - postgresql
+      - libpq-dev
+      - python-psycopg2
+
+- name: install psycopg2 in conda root env
+  pip: name={{item}} state=present editable=false executable='/opt/conda/bin/pip'
+  with_items:
+    - psycopg2
+
+- name: install psycopg2 in system python3 env
+  pip: name={{item}} state=present editable=false executable='/usr/bin/pip3'
+  with_items:
+    - psycopg2
+
+- name: Create postgres user
+  postgresql_user: name={{ pg_user }} password={{ pg_password }}
+  become: true
+  become_user: postgres
+
+- name: create postgres database for jupyterhub state
+  postgresql_db:
+    name: jupyterhub_db
+  become: true
+  become_user: postgres
