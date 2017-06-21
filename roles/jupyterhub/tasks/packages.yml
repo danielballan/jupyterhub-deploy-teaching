@@ -6,6 +6,7 @@
   with_items:
     - configurable-http-proxy
     - sqlalchemy
+    - psycopg2  # for postgres support
 
 - name: install jupyterhub via pip (the pip from the root conda env)
   pip: name={{item}} state=present editable=false executable='/opt/conda/bin/pip'
