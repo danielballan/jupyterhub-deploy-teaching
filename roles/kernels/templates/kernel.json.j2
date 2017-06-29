@@ -1,0 +1,18 @@
+{
+ "argv": [
+  "/opt/conda_envs/{{ item.envname }}/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}",
+  "||",
+  "/opt/conda_envs/{{ item.envname }}/bin/python",
+  "-m",
+  "IPython.kernel",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "{{ item.display_name }}",
+ "language": "python",
+ "host":"{{ item.host }}"
+}
