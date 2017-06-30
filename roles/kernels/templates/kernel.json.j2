@@ -1,5 +1,8 @@
 {
  "argv": [
+{% for var in (item.envvars | default([])) %}
+  "{{ var }}",
+{% endfor %}
   "/opt/conda_envs/{{ item.envname }}/bin/python",
   "-m",
   "ipykernel_launcher",

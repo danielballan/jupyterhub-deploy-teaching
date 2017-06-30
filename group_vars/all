@@ -7,7 +7,7 @@ extra_packages: ""
 kernelspecs:
 # legacy envs created before we used ansible
  - { name: "stable", envname: "analysis", display_name: "IXS (legacy 2016)", host: "xf10id-srv1", sector: "10-ID" }
- - { name: "stable", envname: "analysis", display_name: "CHX (legacy 2016)", host: "xf11id-srv1", sector: "11-ID" }
+ - { name: "stable", envname: "analysis", display_name: "CHX (legacy 2016)", host: "xf11id-srv1", sector: "11-ID", envvars: ["HDF5_PLUGIN_PATH=/home/xf11id/lz4_workaround/HDF5Plugin"]}
  - { name: "stable", envname: "analysis", display_name: "XPD (legacy 2016)", host: "xf28id-ca1", sector: "28-ID-1" }
  - { name: "stable", envname: "analysis", display_name: "HXN (legacy 2016)", host: "xf03id-srv1", sector: "3-ID" }
  - { name: "stable", envname: "analysis", display_name: "SRX (legacy 2016)", host: "xf05id-ca1", sector: "5-ID" }
@@ -21,7 +21,7 @@ kernelspecs:
 # current envs
  - { name: "analysis-17Q2.0_srv1", envname: "analysis-17Q2.0", display_name: "SIX (current)", host: "xf02id1-srv1", sector: "2-ID" }
  - { name: "analysis-17Q2.0_srv2", envname: "analysis-17Q2.0", display_name: "ISR (current)", host: "xf04id-srv2", sector: "4-ID" }
- - { name: "analysis-17Q2.0_srv1", envname: "analysis-17Q2.0", display_name: "CHX (current)", host: "xf11id-srv1", sector: "11-ID" }
+ - { name: "analysis-17Q2.0_srv1", envname: "analysis-17Q2.0", display_name: "CHX (current)", host: "xf11id-srv1", sector: "11-ID", envvars: ["HDF5_PLUGIN_PATH=/home/xf11id/lz4_workaround/HDF5Plugin"]}
  - { name: "analysis-17Q2.0_srv1", envname: "analysis-17Q2.0", display_name: "ESM (current)", host: "xf21id1-srv1", sector: "21-ID" }
  - { name: "analysis-17Q1.0_srv1", envname: "analysis-17Q2.0", display_name: "CSX on srv1 (current)", host: "xf23id1-srv1", sector: "23-ID-1" }
  - { name: "analysis-17Q1.0_srv2", envname: "analysis-17Q2.0", display_name: "CSX on srv2 (current)", host: "xf23id1-srv2", sector: "23-ID-1" }
