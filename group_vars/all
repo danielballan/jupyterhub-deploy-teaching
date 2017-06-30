@@ -20,6 +20,7 @@ kernelspecs:
  - { name: "analysis-17Q1.0_srv3", envname: "analysis-17Q1.0", display_name: "CSX on srv3 (legacy 2017-1 v0)", host: "xf23id1-srv3", sector: "23-ID-1" }
 # current envs
  - { name: "analysis-17Q2.0_srv1", envname: "analysis-17Q2.0", display_name: "SIX (current)", host: "xf02id1-srv1", sector: "2-ID" }
+ - { name: "analysis-17Q2.0_srv2", envname: "analysis-17Q2.0", display_name: "ISR (current)", host: "xf04id-srv2", sector: "4-ID" }
  - { name: "analysis-17Q2.0_srv1", envname: "analysis-17Q2.0", display_name: "CHX (current)", host: "xf11id-srv1", sector: "11-ID" }
  - { name: "analysis-17Q2.0_srv1", envname: "analysis-17Q2.0", display_name: "ESM (current)", host: "xf21id1-srv1", sector: "21-ID" }
  - { name: "analysis-17Q1.0_srv1", envname: "analysis-17Q2.0", display_name: "CSX on srv1 (current)", host: "xf23id1-srv1", sector: "23-ID-1" }
